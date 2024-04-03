@@ -1,0 +1,18 @@
+<!-- register_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register List</title>
+</head>
+<body>
+    <h1>Register List</h1>
+    <ul>
+        {% for register in registers %}
+            <li>{{ register.name }} - {{ register.age }}</li>
+            <li>{{register.id}}
+        {% endfor %}
+    </ul>
+    <a href="{% url 'register_create' %}">Create New Register</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- register_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if form.instance.pk %}Update Register{% else %}Create Register{% endif %}</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Update Register{% else %}Create Register{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
